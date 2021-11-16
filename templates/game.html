@@ -8,6 +8,33 @@
 
     <form action="/madlib">
       
+    <!-- 
+      answers[0] = person
+      answers[1] = color
+      answers[2] = noun
+      answers[3] = adjective
+      answers[4] = adverb (drop down) 
+        - quickly
+        - fearfully
+        - happily
+        - suspiciously
+        - excitedly
+      answers[5] = past tense verb (radio)
+        - dashed
+        - skipped
+        - tossed
+        - rolled
+        - kicked
+      answers[6] = colors (checkbox?)
+        - tangerine
+      answers[7] = place (dropdown?)
+        - trash
+        - sink
+        - lawn
+        - sky
+        - car
+        - ocean
+    -->
       Type the name of a person:
       <input type="text" name="person"></br>
      Pick a Color:
@@ -24,6 +51,58 @@
       <input type="text" name="noun"></br>
       Type in an adjective:
       <input type="text" name="adjective"></br>
+      Select an adverb:
+      <select name="adverb">
+        <option value="quickly">Quickly</option>
+        <option value="fearfully">Fearfully</option>
+        <option value="happily">Happily</option>
+        <option value="suspiciously">Suspiciously</option>
+        <option value="excitedly">Excitedly</option>
+      </select>
+      </br>
+      Select a verb:   
+      <input type="radio" name="past-tense-verb" value="dashed">
+      <label>Dash</label>
+      <input type="radio" name="past-tense-verb" value="skipped">
+      <label>Skip</label>
+      <input type="radio" name="past-tense-verb" value="tossed">
+      <label>Toss</label>
+      <input type="radio" name="past-tense-verb" value="rolled">
+      <label>Roll</label>
+      <input type="radio" name="past-tense-verb" value="kicked">
+      <label>Kick</label>
+      </br>
+      
+      Pick as many colors as you like:
+      <input type="checkbox" name="colors-list" value="tangerine">
+      <label>Tangerine</label>
+      <input type="checkbox" name="colors-list" value="cyan">
+      <label>Cyan</label>
+      <input type="checkbox" name="colors-list" value="cobalt">
+      <label>Cobalt</label>
+      <input type="checkbox" name="colors-list" value="fuschia">
+      <label>Fuschia</label>
+      <input type="checkbox" name="colors-list" value="ochre">
+      <label>Ochre</label>
+      </br>
+      
+      Select a place:
+      <input type="radio" name="place" value="trash">
+      <label>Trash</label>
+      <input type="radio" name="place" value="sink">
+      <label>Sink</label>
+      <input type="radio" name="place" value="lawn">
+      <label>Lawn</label>
+      <input type="radio" name="place" value="sky">
+      <label>Sky</label>
+      <input type="radio" name="place" value="car">
+      <label>Car</label>
+      <input type="radio" name="place" value="ocean">
+      <label>Ocean</label>
+      </br>
+
+      
+
       <button type="submit">Submit</button>
     </form>
       

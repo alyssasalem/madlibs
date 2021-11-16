@@ -5,9 +5,57 @@
 </head>
 <body>
   <p>
+    <!-- 
+      answers[0] = person
+      answers[1] = color
+      answers[2] = noun
+      answers[3] = adjective
+      answers[4] = adverb
+      answers[5] = past tense verb
+      answers[6] = list of colors
+      answers[7] = places
+    -->
     There once was a {{answers[1]}} {{answers[2]}} sitting in the Hackbright Lab.
     When {{answers[0]}} went to pick it up, it burst into flames in a totally
-    {{answers[3]}} way.
+    {{answers[3]}} way. {{answers[0]}} {{answers[4]}} {{answers[5]}} the {{answers[2]}} into the
+    
+    {% if colors_len > 1 %}
+      {% for word in answers[6] %}
+        {% if word == answers[6][-1] %}
+          and {{word}}
+        {% else %}
+          {{word}},
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      {{answers[6][0]}}
+    {% endif %}
+    {{answers[7]}}.
+    <!--{if: len(answers[6]) > 1: 
+          for word in answers[6]:}
+            if: word == answers[6][-1]:
+              and word 
+            else
+              word, 
+        else:
+          word  
+        <html>
+<head>
+    <title></title>
+</head>
+<body>
+Hi {{name}}!
+{% if compliments %}
+  You're so:
+  <ul>
+    {% for compliment in compliments %}
+      <li>{{ compliment }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+</body>
+</html>-->
+   <!-- {{answers[6]}} {{answers[7]}}.  --> 
   </p>
 </body>
 </html>
